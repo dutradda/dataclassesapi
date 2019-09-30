@@ -1,0 +1,26 @@
+language: python
+cache: cargo
+matrix:
+  include:
+    - python: 3.8-dev
+      dist: xenial
+
+addons:
+  sonarcloud:
+    organization: "dutradda"
+    token:
+      secure: $SONARCLOUD_KEY
+
+before_script:
+  - pip install travis-cargo --user && export PATH=$HOME/.local/bin:$PATH
+
+before_install:
+    - pip install --upgrade pip
+    - pip install flit
+
+install: flit install --deps develop
+
+script: 
+  - pytest -xvv --cov apidaora/ --no-cov-on-fail --cov-report=term-missing apidaora/
+  - docs/src/index/test.sh
+  - sonar-scanner

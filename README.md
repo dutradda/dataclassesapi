@@ -12,6 +12,12 @@
 
 ---
 
+[![Build Status](https://travis-ci.org/cesarbruschetta/apidaora.svg?branch=master)](https://travis-ci.org/cesarbruschetta/apidaora)
+
+[![PyPI version](https://badge.fury.io/py/apidaora.svg)](https://badge.fury.io/py/apidaora)
+
+---
+
 **Documentation**: <a href="https://dutradda.github.io/apidaora" target="_blank">https://dutradda.github.io/apidaora</a>
 
 **Source Code**: <a href="https://github.com/dutradda/apidaora" target="_blank">https://github.com/dutradda/apidaora</a>
