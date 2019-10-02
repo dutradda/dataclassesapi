@@ -38,7 +38,7 @@ test = [
     'pytest>=5.1.1',
     'tox',
     'towncrier',
-    'uvicorn'
+    # 'uvicorn'
 ]
 doc = [
     'mkdocs',
@@ -76,3 +76,8 @@ skip-string-normalization = '1'
         directory = "change"
         name = "Changes"
         showcontent = true
+
+[[source]]
+url = "https://github.com/dutradda/jsondaora/archive/master.tar.gz"
+verify_ssl = true
+name = "jsondaora"
