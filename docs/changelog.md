@@ -1,6 +1,16 @@
-0.5.1 (2019-09-21)
-==================
-- Improve docs
+## CHANGELOG
+
+### 0.6.0 - 2019-10-04
+
+ - Add devtools submodule
+
+ - Refactor path decorator
+
+ - Improve examples to use async def
+
+ - Update public interface
+
+ - Improve docs
 
 
 0.5.0 (2019-09-20)
