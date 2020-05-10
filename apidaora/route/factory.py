@@ -106,9 +106,11 @@ def make_route(
             if annotations_info.has_headers:
                 headers_map = ControllerInput.__headers_name_map__
                 request.headers = {
-                    name: annotations_headers[name](h_value.decode())  # type: ignore
+                    headers_map.get(h_name.decode()): annotations_headers[
+                        headers_map.get(h_name.decode())
+                    ](h_value.decode())  # type: ignore
                     for h_name, h_value in asgi_request.headers
-                    if (name := headers_map.get(h_name.decode()))  # noqa
+                    if (headers_map.get(h_name.decode()))  # noqa
                     in annotations_headers
                 }
 

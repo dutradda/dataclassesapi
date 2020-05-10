@@ -23,7 +23,8 @@ jobs:
         . venv/bin/activate
         make setup-python-project
         bake setup-apidaora
-        bake dependencies
+        venv/bin/python setup install
+        venv/bin/activate
     - name: Run Code Checks
       run: |
         . venv/bin/activate
