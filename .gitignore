@@ -112,3 +112,11 @@ venv.bak/
 
 # apidaora
 hello.gz
+
+# apidaora compiled modules
+*.c
+
+# builded setup
+apidaora.egg-info
+build
+dist

@@ -106,8 +106,8 @@ def get_class_routes(controller: Any) -> List[Route]:
         make_route(
             path_pattern=controller.path,
             method=method,
-            controller=getattr(controller, method_str),
+            controller=getattr(controller, method.value.lower()),
         )
         for method in MethodType
-        if hasattr(controller, method_str := method.value.lower())  # noqa
+        if hasattr(controller, method.value.lower())  # noqa
     ]
